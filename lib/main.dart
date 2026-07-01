@@ -12,7 +12,11 @@ class NoteApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Note APP",
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("hello "),
+        ),
+      ),
     );
   }
 }
