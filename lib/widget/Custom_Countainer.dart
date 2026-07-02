@@ -12,10 +12,10 @@ class CustomCountainer extends StatelessWidget {
       child: Container(
 
         height: 50,
-        width: double.infinity,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Color(0xff53EFD9),
-          borderRadius: BorderRadius.circular(80),
+          borderRadius: BorderRadius.circular(8),
 
         ),
         child:  Center(

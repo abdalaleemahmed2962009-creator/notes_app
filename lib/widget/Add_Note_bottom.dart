@@ -8,35 +8,34 @@ class AddNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 40,
-              bottom: 14,
-              left: 6,
-              right: 6,
-            ),
-            child: CustomTextfield(title: 'Title '),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 14, left: 6, right: 6),
-            child: CustomTextfield(
-              title: 'Content',
-              Scrolling: EdgeInsets.only(
-                right: 66,
-                top: 66,
-                bottom: 66,
-                left: 4,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 7,vertical: 9),
+        child: ListView(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 40,
+                bottom: 14,
+                left: 6,
+                right: 6,
               ),
+              child: CustomTextfield(title: 'Title '),
             ),
-          ),
-          SizedBox(
-            height: 28,
-          ),
-          CustomCountainer(name: "Add")
+            Padding(
+              padding: const EdgeInsets.only(bottom: 14, left: 6, right: 6),
+              child: CustomTextfield(
 
-        ],
+                title: 'Content',
+             maxlines: 6 ,
+                ),
+            ),
+            SizedBox(
+              height: 28,
+            ),
+            CustomCountainer(name: "Add")
+
+          ],
+        ),
       ),
     );
   }

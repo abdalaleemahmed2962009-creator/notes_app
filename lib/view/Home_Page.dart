@@ -4,19 +4,14 @@ import '../widget/Add_Note_bottom.dart';
 import '../widget/Noting _List.dart';
 import '../widget/custom_icon.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [CustomIcon()],
+        actions: [CustomIcon(shapeicon:Icons.search)],
         title: Text(
           "Notes",
           style: TextStyle(color: Colors.white, fontSize: 27),
