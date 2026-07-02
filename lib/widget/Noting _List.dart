@@ -6,10 +6,13 @@ class Noting_List extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemBuilder: (context , index){
-      return HomeBody();
-    }
+    return Padding(
+      padding: const EdgeInsets.only(bottom:23),
+      child: ListView.builder(
+          itemBuilder: (context , index){
+        return HomeBody();
+      }
+      ),
     );
   }
 }
