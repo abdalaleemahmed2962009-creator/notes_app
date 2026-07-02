@@ -27,13 +27,6 @@ class _HomePageState extends State<HomePage> {
         ),),
       ),
       body:Noting_List(),
-      floatingActionButton: FloatingActionButton(onPressed: (){
-        IconButton(onPressed: () {
-          setState(() {
-            count++;
-          });
-        }, icon: Icon(Icons.add,color: Colors.white,),);
-      }),
 
     );
   }
