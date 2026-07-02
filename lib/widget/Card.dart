@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes/view/editing_page.dart';
-import 'package:notes/view/editing_page.dart';
+
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
