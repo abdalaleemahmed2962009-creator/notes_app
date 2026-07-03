@@ -18,11 +18,11 @@ class EditNote extends StatelessWidget {
       left: 6,
       right: 6,
       ),
-      child: CustomTextfield(title: 'Title '),
+      child: CustomFormTextfield(title: 'Title '),
       ),
       Padding(
       padding: const EdgeInsets.only(bottom: 14, left: 6, right: 6),
-      child: CustomTextfield(
+      child: CustomFormTextfield(
 
       title: 'Content',
       maxlines: 6 ,

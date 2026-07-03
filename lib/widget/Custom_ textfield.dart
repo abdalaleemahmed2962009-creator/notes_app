@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 
-class CustomTextfield extends StatelessWidget {
-  CustomTextfield({
+class CustomFormTextfield extends StatelessWidget {
+  CustomFormTextfield({
     required this.title,
-    this.onchange,
+    this.onsave,
     this.maxlines=1
   });
 final int maxlines ;
   final String title;
 
 
-  Function(String)? onchange;
+  Function(String?)?  onsave;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: (data) {
+
+        if(data?.isEmpty??true ){
+          return "لزم تدخل البيانات ";
+        }
+      },
+
       cursorColor: Color(0xff53EFD9),
 maxLines:maxlines ,
-      onChanged: onchange,
+      onSaved: onsave,
       decoration: InputDecoration(
         hintText: title,
 
