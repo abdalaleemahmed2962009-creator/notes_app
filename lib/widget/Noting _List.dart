@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notes/widget/Card.dart';
 
-import 'home_body.dart';
+
 class Noting_List extends StatelessWidget {
   const Noting_List({super.key});
 
