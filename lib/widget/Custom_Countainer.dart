@@ -2,9 +2,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 class CustomCountainer extends StatelessWidget {
-  CustomCountainer({super.key,required this.name, this.ontap});
+  CustomCountainer({super.key,required this.name, this.ontap,  this.isLoading=false });
   String name ;
   VoidCallback? ontap;
+  final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,7 +19,7 @@ class CustomCountainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
 
         ),
-        child:  Center(
+        child: isLoading?Center(child: CircularProgressIndicator(color: Colors.black,)): Center(
           child: Text(name,style: TextStyle(
             fontSize: 20,
             color:Colors.black,
