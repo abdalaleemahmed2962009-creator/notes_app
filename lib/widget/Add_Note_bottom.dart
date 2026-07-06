@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:notes/cubits/Show_Notes_Cubit/notes_Show_cubit.dart';
 import 'package:notes/cubits/add_note_cubit/notes_add_cubit.dart';
 import 'package:notes/cubits/add_note_cubit/notes_add_states.dart';
@@ -17,7 +18,7 @@ class AddNote extends StatelessWidget {
         if (state is NotesAddSucces) {
           BlocProvider.of<Notes_Show_Cubit>(context).Shownote();//=>add +note
           Navigator.pop(context);
-          showtextSnakbar(context, message: "success", color: Colors.green);
+          showtextSnakbar(context, message: "تم اضافة نوت", color: Colors.green);
         }
         if (state is NotesAddFailure) {
           Navigator.pop(context);

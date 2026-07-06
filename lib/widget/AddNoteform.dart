@@ -5,6 +5,7 @@ import 'package:notes/cubits/add_note_cubit/notes_add_cubit.dart'
     show Notes_add_Cubit;
 import 'package:notes/cubits/add_note_cubit/notes_add_states.dart';
 import 'package:notes/models/note_model.dart';
+import 'package:notes/widget/Colors_List.dart';
 import 'package:notes/widget/Custom_%20textfield.dart';
 import 'package:notes/widget/Custom_Countainer.dart';
 
@@ -49,7 +50,7 @@ class _AddNoteformState extends State<AddNoteform> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 14, left: 6, right: 6),
+                  padding: const EdgeInsets.only(bottom: 18, left: 6, right: 6),
                   child: CustomFormTextfield(
                     title: 'Content',
                     maxlines: 6,
@@ -59,7 +60,8 @@ class _AddNoteformState extends State<AddNoteform> {
                     },
                   ),
                 ),
-                SizedBox(height: 23),
+                List_Colors(),
+                SizedBox(height: 29),
 
                 BlocBuilder<Notes_add_Cubit, NotesAddState>(
                   builder: (context, state) {

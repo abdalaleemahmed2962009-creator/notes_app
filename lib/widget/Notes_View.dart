@@ -15,7 +15,7 @@ final NoteModel note;
       GestureDetector(
         onTap: (){
           Navigator.push(context, MaterialPageRoute(builder: (context){
-            return EditingPage();
+            return EditingPage(note: note,);
           }));
         },
         child: Container(
@@ -47,7 +47,7 @@ final NoteModel note;
                   onPressed: () {
                     note.delete();//clear =>on hive
                     BlocProvider.of<Notes_Show_Cubit>(context).Shownote();//=> updata ui
-                    showtextSnakbar(context, message: " تَمَّ الحَذْفُ", color: Colors.white);
+                    showtextSnakbar(context, message: "ُ تَمَّ الحَذْف نوت", color: Colors.white);
                   },
                   icon: Icon(Icons.delete, color: Colors.black, size: 38),
                 ),

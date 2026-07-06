@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 class CustomIcon extends StatelessWidget {
-  const CustomIcon({super.key, required this.shapeicon});
+  const CustomIcon({super.key, required this.shapeicon, this.onPressed});
  final IconData shapeicon;
+ final void Function()?  onPressed ;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +16,7 @@ class CustomIcon extends StatelessWidget {
 
          ),
         child: Center(
-          child: Icon(shapeicon),
+          child:IconButton(onPressed: onPressed, icon: Icon(shapeicon))
         ),
       ),
     );
