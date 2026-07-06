@@ -5,7 +5,8 @@ import 'package:notes/cubits/add_note_cubit/notes_add_cubit.dart'
     show Notes_add_Cubit;
 import 'package:notes/cubits/add_note_cubit/notes_add_states.dart';
 import 'package:notes/models/note_model.dart';
-import 'package:notes/widget/Colors_List.dart';
+
+import 'package:notes/widget/Colors_addNote_List.dart';
 import 'package:notes/widget/Custom_%20textfield.dart';
 import 'package:notes/widget/Custom_Countainer.dart';
 

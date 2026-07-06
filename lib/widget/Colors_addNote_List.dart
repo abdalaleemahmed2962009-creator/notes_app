@@ -39,7 +39,8 @@ class _List_ColorsState extends State<List_Colors> {
             child: GestureDetector(
               onTap: () {
                 CurrentIndex = index; //2
-                BlocProvider.of<Notes_add_Cubit>(context).color =kColors[index];
+                BlocProvider.of<Notes_add_Cubit>(context).color =
+                    kColors[index];
                 setState(() {});
               },
               child: Colors_view(

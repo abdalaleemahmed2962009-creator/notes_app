@@ -5,6 +5,7 @@ import 'package:notes/models/note_model.dart';
 import 'package:notes/widget/Custom_%20textfield.dart' show CustomFormTextfield;
 
 import 'package:notes/widget/custom_icon.dart';
+import 'package:notes/widget/edit_note_ColorsList.dart';
 import 'package:notes/widget/show_snakbar.dart';
 
 class EditingPage extends StatefulWidget {
@@ -29,12 +30,17 @@ class _EditingPageState extends State<EditingPage> {
           CustomIcon(
             shapeicon: Icons.check,
             onPressed: () {
+
               widget.note.title = widget.title ?? widget.note.title;
               widget.note.subtitle = widget.subtitle ?? widget.note.subtitle;
               widget.note.save();
               BlocProvider.of<Notes_Show_Cubit>(context).Shownote();
               Navigator.pop(context);
-              showtextSnakbar(context, message: " تم تعديل نوت بناجح ", color: Colors.green);
+              showtextSnakbar(
+                context,
+                message: " تم تعديل نوت بناجح ",
+                color: Colors.green,
+              );
             },
           ),
         ],
@@ -69,6 +75,8 @@ class _EditingPageState extends State<EditingPage> {
                     },
                   ),
                 ),
+                SizedBox(height: 10),
+                edit_note_Colors_list(note: widget.note),
               ],
             ),
           ),

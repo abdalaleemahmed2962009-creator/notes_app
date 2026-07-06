@@ -7,7 +7,6 @@ import 'package:notes/cubits/add_note_cubit/notes_add_states.dart';
 import 'package:notes/widget/AddNoteform.dart';
 import 'package:notes/widget/show_snakbar.dart';
 
-
 class AddNote extends StatelessWidget {
   AddNote({super.key});
 
@@ -16,9 +15,13 @@ class AddNote extends StatelessWidget {
     return BlocConsumer<Notes_add_Cubit, NotesAddState>(
       listener: (context, state) {
         if (state is NotesAddSucces) {
-          BlocProvider.of<Notes_Show_Cubit>(context).Shownote();//=>add +note
+          BlocProvider.of<Notes_Show_Cubit>(context).Shownote(); //=>add +note
           Navigator.pop(context);
-          showtextSnakbar(context, message: "تم اضافة نوت", color: Colors.green);
+          showtextSnakbar(
+            context,
+            message: "تم اضافة نوت",
+            color: Colors.green,
+          );
         }
         if (state is NotesAddFailure) {
           Navigator.pop(context);
@@ -27,8 +30,8 @@ class AddNote extends StatelessWidget {
       },
       builder: (context, state) {
         return AbsorbPointer(
-            absorbing: state is NotesAddLoading ? true : false,
-            child: AddNoteform()
+          absorbing: state is NotesAddLoading ? true : false,
+          child: AddNoteform(),
         );
       },
     );
